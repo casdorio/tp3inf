@@ -35,4 +35,8 @@ public class CursoService {
     public void deleteById(Long id) {
         cursoRepository.deleteById(id);
     }
+
+    public long count() {
+        return cursoRepository.count();
+    }
 }

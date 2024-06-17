@@ -20,6 +20,15 @@ public class Curso {
     private String nome;
 
     @ManyToMany(mappedBy = "cursos")
+    
     @JsonIgnore 
     private Set<Aluno> alunos = new HashSet<>();
+
+    public Set<Aluno> getAlunos() {
+        return alunos;
+    }
+
+    public void setAlunos(Set<Aluno> alunos) {
+        this.alunos = alunos;
+    }
 }
